@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  jenkins:
+    image: jenkins_sample
+    container_name: jenkins_sample1
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+    ports:
+      - "8081:8080"
+      - "50001:50000"
+    
