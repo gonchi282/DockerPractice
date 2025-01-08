@@ -26,4 +26,8 @@ RUN gpasswd -a jenkins sudo
 # jenkinsのパスワード変更
 RUN echo jenkins:jenkins | chpasswd
 
+# タイムゾーン変更
+RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+ENV JAVA_OPTS=-Duser.timezone=Asia/Tokyo
+
 USER jenkins
