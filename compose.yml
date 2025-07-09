@@ -2,8 +2,11 @@ version: '3'
 
 services:
   jenkins:
-    image: jenkins_sample
-    container_name: jenkins_sample1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: jenkins-server-2.517-jdk21
+    container_name: jenkins-server
     volumes:
       - ./jenkins_home:/var/jenkins_home
     ports:
