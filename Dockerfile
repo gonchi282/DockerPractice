@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.491-jdk21
+FROM jenkins/jenkins:2.517-jdk21
 
 # 以下rootで実行
 USER root
